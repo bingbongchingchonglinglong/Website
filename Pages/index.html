@@ -1,0 +1,111 @@
+.<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <link rel="stylesheet" href="../Css/style.css">
+    <title>My Portfolio</title>
+    <script src="https://kit.fontawesome.com/f4291afb5e.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <a href="#Main" class="scrollLink">My Portfolio</a>
+            <nav>
+                <a href="#Skills" class="scrollLink">Skills</a>  
+                <a href="#Work" class="scrollLink">Work</a>
+                <a href="#Contacts" class="scrollLink">Contacts</a>
+            </nav>
+        </header>
+
+        <header id="navbar">
+            <a href="#Main" class="scrollLink">My Portfolio</a>
+            <nav>
+                <a href="#Skills" class="scrollLink">Skills</a>  
+                <a href="#Work" class="scrollLink">Work</a>
+                <a href="#Contacts" class="scrollLink">Contacts</a>
+            </nav>
+        </header>
+
+        <section id="Main" class="main">
+            <div>
+                <h3 class="text ">Hello, I'm [] <br><span>I'm a software developer </span></h3>
+                <h3>I  build amazing websites and programs </h3><br>
+                <a href=""><button>View My Work</button></a><br><br>
+                <i class="fa-brands fa-linkedin medias"></i>
+                <i class="fa-brands fa-youtube medias"></i>
+                <i class="fa-brands fa-twitter medias"></i>
+                <i class="fa-brands fa-instagram medias"></i>
+            </div>
+        </section><br><br><br>
+        
+        <section id="Skills">
+            <h1>Skills</h1><br><br><br>
+
+            <div class="skill">
+                <i class="fa-sharp fa-solid fa-code skillicon"></i>
+                <h6>Web Development</h6>
+                <p>Creating and Developing Websites using HTML and CSS and Javascript</p>
+            </div>
+
+            <div class="skill">
+                <i class="fa-solid fa-robot skillicon"></i>
+                <h6>Chatbot Development</h6>
+                <p>Designing and Developing chatbots with Python and Data Encryption</p>
+            </div>
+
+            <div class="skill">  
+                <i class="fa-solid fa-gamepad skillicon"></i>
+                <h6>2D Game Development</h6>
+                <p>Designing and Creating 2D video games with a complete working game engine</p>
+            </div>
+        </section>
+
+        <section id="Skills">
+
+            <div class="skill">
+                <i class="fa-brands fa-unity skillicon"></i>
+                <h6>3D Game Development</h6>
+                <p>Designing and Creating 3D video games with a complete working game engine</p>
+            </div>
+
+            <div class="skill">
+                <i class="fa-solid fa-vr-cardboard skillicon"></i>
+                <h6>VR Game Development</h6>
+                <p>Designing and Creating VR video games with a complete working game engine</p>
+            </div>
+
+            <div class="skill">  
+                <i class="fa-solid fa-mobile-screen-button skillicon"></i>
+                <h6>Mobile Development</h6>
+                <p>Designing and developing fully working mobile applications</p>
+            </div>
+        </section>
+
+        <footer id="Contacts">
+            &copy; 2023 Ali S. All rights reserved.
+        </footer>
+
+        <script>
+            $(document).ready(function() {
+                $("a.scrollLink").click(function(event) {
+                    event.preventDefault();
+                    $("html, body").animate({
+                        scrollTop: $($(this).attr("href")).offset().top
+                      }, 500);
+                  });
+            });
+
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-100px";
+            }
+            }
+        </script>
+
+    </body>
+</html>
